@@ -17,3 +17,6 @@
 
 # Ignore token file
 /.secret
+
+# Ignore database
+/config/database.yml
