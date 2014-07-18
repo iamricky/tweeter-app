@@ -6,12 +6,17 @@ describe "Static pages" do
 	describe "Home page" do
 		it "should have the content 'Tweeter'" do
 			visit '/static_pages/home'
-			expect(page).to have_content('Tweeter')
+			expect(page).to have_content("#{base_title}")
 		end
 
-		it "should have the correct title" do
+		it "should have the base title" do
 			visit '/static_pages/home'
-			expect(page).to have_title("#{base_title} | Home")
+			expect(page).to have_title("#{base_title}")
+		end
+
+		it "should have the base title" do
+			visit '/static_pages/home'
+			expect(page).not_to have_title("| Home")
 		end
 	end
 
